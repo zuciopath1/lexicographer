@@ -1,0 +1,18 @@
+<svg id="Component_131" data-name="Component 131" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eed370;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_43" data-name="Ellipse 43" class="cls-1" cx="20.5" cy="20.5" r="20.5"/>
+  <g id="Group_167" data-name="Group 167" transform="translate(10.531 13)">
+    <rect id="Rectangle_1098" data-name="Rectangle 1098" class="cls-2" width="4.8" height="11.2" rx="1" transform="translate(0 4)"/>
+    <path id="Path_7" data-name="Path 7" class="cls-2" d="M8,17.007a1.9,1.9,0,0,0,.9,1.647l1.512.875A2.659,2.659,0,0,0,11.905,20h6.532a.91.91,0,0,0,.9-.753L20.6,11.9a1.946,1.946,0,0,0-.385-1.575A1.767,1.767,0,0,0,18.8,9.647s-4.5.863-5.4,0,0-4.706,0-4.706A.921.921,0,0,0,12.5,4h-.63a1.8,1.8,0,0,0-1.647,1.139L8.207,10.052A2.937,2.937,0,0,0,8,11.162Z" transform="translate(-1.573 -4)"/>
+  </g>
+</svg>

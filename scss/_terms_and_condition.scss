@@ -1,0 +1,112 @@
+body {
+  .terms-and-condition {
+    width: 100%;
+    padding-right: 120px;
+    margin: 0 auto;
+    @media (max-width: 800px) {
+      padding: 0;
+    }
+
+    &__header {
+      @include flex-jc-ai(center, center);
+      flex-direction: column;
+      margin-top: 145px;
+
+      &--header {
+        font-size: 50px;
+        font-family: $venuri;
+        color: $darkBlue;
+        margin-bottom: 10px;
+        line-height: 67px;
+      }
+
+      &--paragraph {
+        color: $darkBlue;
+        text-align: center;
+        max-width: 800px;
+        font-size: 18px;
+        line-height: 24px;
+        font-family: $dejavu;
+      }
+
+      @media (max-width: 800px) {
+        margin-top: 44.5px;
+
+        &--header {
+          font-size: 28px;
+          line-height: 37px;
+        }
+
+        &--paragraph {
+          max-width: 508px;
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        margin-top: 40px;
+
+        &--header {
+          font-size: 19px;
+          line-height: 26px;
+        }
+
+        &--paragraph {
+          max-width: 213px;
+          font-size: 10px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    &__section {
+      margin: 150px;
+      &--header {
+        font-family: $venuri;
+        font-size: 30px;
+        color: $darkBlue;
+        margin-bottom: 30px;
+        line-height: 35px;
+      }
+
+      &--paragraph {
+        font-family: $dejavu;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 800px) {
+        margin: 63px;
+
+        &--header {
+          font-size: 25px;
+          line-height: 29px;
+        }
+
+        &--paragraph {
+          max-width: 648px;
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        margin: 63px 24px;
+
+        &--header {
+          font-size: 15px;
+          line-height: 18px;
+        }
+
+        &--paragraph {
+          max-width: 272px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}

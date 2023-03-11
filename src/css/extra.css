@@ -1,0 +1,163 @@
+body {
+    font-family: "DejaVuSans";
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main {
+    flex-grow: 1;
+}
+.about-project-text .text p {
+    display: inline;
+}
+.about-project-text.show-more .more-texts {
+    display: inline-block;
+}
+.about-project {
+    overflow: hidden;
+}
+body header .container nav ul {
+    align-items: baseline;
+}
+body header .container nav ul li {
+    line-height: 24px;
+}
+.msg {
+    display: block;
+    padding-top: 100px 0;
+    width: 100%;
+    text-align: center;
+    font-family: "BPGVenuri2010";
+    font-size: 1.5rem;
+}
+.msg a {
+    color: #eed370;
+}
+.pagination {
+    max-width: 600px;
+}
+.definition-info {
+    max-width: 85%;
+}
+.submit-btn {
+    border: 0;
+    background: transparent;
+}
+/* .user-photo {
+    overflow: hidden;
+} */
+body footer .container .left-block-social .social-icons {
+    justify-content: flex-start;
+}
+.social-icons a {
+    padding-right: 30px;
+}
+.message-container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 107px 0;
+}
+.fb-share-button {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+}
+.social-container {
+    display: flex;
+}
+.social-container .social-fb, 
+.social-container .fb-icon {
+    position: absolute;
+}
+
+.like-count {
+    position: absolute;
+    bottom: 15px;
+    right: 56px;
+    font-size: 19px;
+    color: #798996;
+    font-family: "DejaVuSans";
+}
+.page-num a {
+    color: inherit;
+}
+.description-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.definition-box {
+    position: relative;
+}
+.definition-box .like-button {
+    position: absolute;
+    top: -40px;
+    right: -90px;
+    width: 41px;
+    z-index: 100;
+}
+.definition-box .like-count {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 16px;
+}
+.definition-box span.like__time {
+    bottom: 9px;
+    right: 40px !important;
+    width: auto !important;
+    top: auto !important;
+}
+.description .about {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+.reset-container, .verify-container {
+    flex-direction: column;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 132px 0px;
+    align-items: center;
+    margin: auto;
+}
+.reset-container label {
+    margin-top: 20px;
+    display: inline-block;
+}
+.reset-container input {
+    resize: none;
+    width: 100%;
+    padding: 23px 40px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    border: 1px solid #798996;
+    border-radius: 8px;
+}
+
+.reset-container button[type="submit"],
+.verify-container button[type="submit"] {
+    background: #798996;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 9px 20px;
+    margin-top: 20px;
+    color: #fff;
+    font-family: "DejaVuSans";
+    font-size: 18px;
+    margin-bottom: 55px;
+    transition: all 0.5s;
+}
+
+@media only screen and (max-width: 767px) {
+    body footer .container .left-block-social .social-icons {
+        justify-content: center;
+    }
+    .social-icons a {
+        padding-right: 0;
+    }
+}

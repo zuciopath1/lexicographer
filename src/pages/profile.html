@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="შექმენი ქართული ტერმინი, შემოუერთდი ტერმინების კონკურსს!"
+    />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:title" content="შექმენი ქართული ტერმინი" />
+    <meta
+      property="og:description"
+      content="შექმენი ქართული ტერმინი, შემოუერთდი ტერმინების კონკურსს!"
+    />
+    <meta property="og:image" content="../../assets/images/sharing-image.JPG" />
+
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo.svg" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a1f74a0675.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>შექმენი ქართული ტერმინი</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="../../index.html" class="logoStyle">
+          <div class="main">
+            <div class="logo">
+              <img src="../../assets/images/logo.svg" alt="logo" />
+            </div>
+            <h2>შექმენი ქართული ტერმინი</h2>
+          </div>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="./about.html">პროექტის შესახებ</a></li>
+            <li><a href="./termins_bank.html">ტერმინების ბანკი</a></li>
+            <li>
+              <a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a>
+            </li>
+            <li><a href="./contact.html">კონტაქტი</a></li>
+          </ul>
+        </nav>
+        <div class="signed-in-profile">
+          <a href="#" class="signed-in-profile__text">გალაქტიონ</a>
+          <img
+            src="../../assets/images/profile-photo.svg"
+            class="signed-in-profile__picture"
+          />
+        </div>
+        <div class="burger-bar">
+          <img
+            class="open-burger"
+            src="../../assets/images/burger.svg"
+            alt="burger"
+          />
+          <img
+            class="close-burger hidden"
+            src="../../assets/images/closeX.svg"
+            alt="closeBurger"
+          />
+        </div>
+        <div class="profile hidden" id="profile">
+          <h5 class="user">თეკლა</h5>
+          <div class="image"></div>
+        </div>
+        <div class="profile-menu hidden" id="profile-menu">
+          <ul>
+            <li><a href="#">პროფილის რედაქტირება</a></li>
+            <li><a href="#">ჩემი განმარტებები</a></li>
+            <li><a href="#">ჩემი ტერმინები</a></li>
+            <li><a href="../../index.html">გამოსვლა</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="burger-navigation">
+        <nav>
+          <ul>
+            <li class="profile-weird">
+              <a href="profile.html"
+                >თეკლა ფიფქრი
+                <img
+                  src="../../assets/images/profile-photo.svg"
+                  alt="profileimg"
+              /></a>
+            </li>
+            <li class="shesvla"><a href="sign_in.html">შესვლა</a></li>
+            <li><a href="about.html">პროექტის შესახებ</a></li>
+            <li><a href="termins_bank.html">ტერმინების ბანკი</a></li>
+            <li>
+              <a href="new_term.html">შემოგვთავაზე შენი ტერმინი</a>
+            </li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="menu">
+      <section class="profile-section">
+        <div class="container">
+          <div class="profile-nav">
+            <div class="user-photo">
+              <img
+                class="my-photo"
+                src="../../assets/images/profile-photo.svg"
+                alt="add-image"
+              />
+              <div class="image-upload">
+                <label for="img-input">
+                  <img
+                    class="corner-img"
+                    src="../../assets/images/add-photo.svg"
+                    alt="add-photo"
+                  />
+                </label>
+                <input
+                  id="img-input"
+                  type="file"
+                  onchange="document.querySelector('.my-photo').src = window.URL.createObjectURL(this.files[0])"
+                  onclick="addPhoto()"
+                />
+              </div>
+            </div>
+            <div class="text-nav">
+              <div class="user-name">
+                <h2>გალაქტიონ დანელია</h2>
+                <img src="../../assets/images/edit-icon.svg" alt="edit" />
+              </div>
+              <ul class="nav-ul">
+                <li class="profile-edit">
+                  <span class="nav-txt profile-active-nav"
+                    >პროფილის რედაქტირება</span
+                  >
+                </li>
+                <li class="profile-edit">
+                  <span class="nav-txt">ჩემი განმარტებები</span>
+                  <ul class="sub-ul-definition hidden">
+                    <li class="sub-li-definition">
+                      <span
+                        class="nav-txt profile-active-sub-nav nav-txt-hover-1"
+                        >ყველა</span
+                      >
+                    </li>
+                    <li class="sub-li-definition">
+                      <span class="nav-txt nav-txt-hover-2">გამარჯვებული</span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="profile-edit">
+                  <span class="nav-txt">ჩემი ტერმინები</span>
+                  <ul class="sub-ul-termin hidden">
+                    <li class="sub-li-termin">
+                      <span class="nav-txt nav-txt-hover-3">ყველა</span>
+                    </li>
+                    <li class="sub-li-termin">
+                      <span class="nav-txt nav-txt-hover-4">დადასტურებული</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="profile-edit">
+                  <a href="../../index.html"
+                    ><span class="nav-txt">გამოსვლა</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="right-inner">
+            <div class="profile-termins-result hidden"></div>
+            <form method="post" class="profile-edit active">
+              <input
+                class="email-reg"
+                type="email"
+                placeholder="მომხმარებლის ფოსტა*"
+                value="Loremipsum@gmail.com"
+              />
+              <span class="error hidden"
+                ><img
+                  src="../../assets/images/error-svg.svg"
+                  alt="error"
+                />გთხოვთ მიუთითეთ ვალიდური ელ.ფოსტა</span
+              >
+              <input
+                class="name-reg"
+                type="text"
+                placeholder="მომხმარებლის სახელი*"
+                value="გალაკტიონ დანელია"
+              />
+              <span class="error hidden"
+                ><img
+                  src="../../assets/images/error-svg.svg"
+                  alt="error"
+                />გთხოვთ მიუთითეთ სახელი</span
+              >
+              <input
+                class="phone-reg"
+                type="text"
+                placeholder="ტელეფონის ნომერი*"
+                value="+995 000 000 000"
+              />
+              <span class="error hidden"
+                ><img
+                  src="../../assets/images/error-svg.svg"
+                  alt="error"
+                />გთხოვთ მიუთითეთ ვალიდური ნომერი</span
+              >
+              <div class="password-input">
+                <input
+                  class="psw-reg"
+                  type="password"
+                  placeholder="პაროლი*"
+                  value="samplepassword"
+                />
+                <img
+                  class="show-password"
+                  src="../../assets/images/icon-eye.svg"
+                  alt="eye"
+                />
+              </div>
+              <span class="error hidden"
+                ><img
+                  class="show-password"
+                  src="../../assets/images/error-svg.svg"
+                  alt="error"
+                />გთხოვთ მიუთითეთ ვალიდური პაროლი. არანაკლებ 8 სიმბოლო</span
+              >
+              <div class="password-input">
+                <input
+                  class="psw-repeat-reg"
+                  type="password"
+                  placeholder="პაროლის გამეორება*"
+                  value="samplepassword"
+                />
+                <img
+                  class="show-password"
+                  src="../../assets/images/icon-eye.svg"
+                  alt="eye"
+                />
+              </div>
+
+              <span class="error hidden"
+                ><img
+                  src="../../assets/images/error-svg.svg"
+                  alt="error"
+                />პაროლები არ ემთხვევა</span
+              >
+              <button type="button" class="submit-profile-edit">შენახვა</button>
+            </form>
+            <div class="my-terms hidden">
+              <div class="term">
+                <div class="title">
+                  <div class="term-title">
+                    <h2>lorem ipsum</h2>
+                    <img
+                      src="../../assets/images/icon-pending.svg"
+                      alt="pending"
+                    />
+                  </div>
+                  <div class="terms-left">
+                    <a href="#">Front-End</a>
+                    <div class="social-fb">
+                      <img src="../../assets/images/fb.svg" alt="facebook" />
+                    </div>
+                  </div>
+                </div>
+                <div class="definition">
+                  <div class="definition-header">
+                    <span>განმარტების ნახვა (2)</span>
+                    <img
+                      class="arrow"
+                      src="../../assets/images/Icon-arrow-down.svg"
+                      alt="logo"
+                    />
+                  </div>
+                  <div class="definition-box">
+                    <div class="definition-info">
+                      <h2>ათს შოკოლადი</h2>
+                      <span>ავტორი ავტორი</span>
+                    </div>
+                    <div class="like">
+                      <span class="like__number">1,920</span>
+                      <img
+                        src="../../assets/images/like-icon.svg"
+                        alt="like"
+                        class="like__img"
+                      />
+                      <span class="like__time">3 კვირის წინ</span>
+                    </div>
+                  </div>
+                  <div class="definition-box">
+                    <div class="definition-info">
+                      <h2>ათს შოკოლადი</h2>
+                      <span>ავტორი ავტორი</span>
+                    </div>
+                    <div class="like">
+                      <span class="like__number">1,920</span>
+                      <img
+                        src="../../assets/images/like-icon.svg"
+                        alt="like"
+                        class="like__img"
+                      />
+                      <span class="like__time">3 კვირის წინ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="term">
+                <div class="title">
+                  <div class="term-title">
+                    <h2>lorem ipsum</h2>
+                    <img
+                      src="../../assets/images/icon-rejected.svg"
+                      alt="pending"
+                    />
+                  </div>
+                  <div class="terms-left">
+                    <a href="#">Front-End</a>
+                    <div class="social-fb">
+                      <img src="../../assets/images/fb.svg" alt="facebook" />
+                    </div>
+                  </div>
+                </div>
+                <div class="definition wrong">
+                  <div class="definition-header">
+                    <span>ტერმინი უარყოფილია</span>
+                    <img
+                      class="arrow"
+                      src="../../assets/images/Icon-arrow-down.svg"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="term">
+                <div class="title">
+                  <div class="term-title">
+                    <h2>lorem ipsum</h2>
+                    <img
+                      src="../../assets/images/icon-accepted.svg"
+                      alt="pending"
+                    />
+                  </div>
+                  <div class="terms-left">
+                    <a href="#">Front-End</a>
+                    <div class="social-fb">
+                      <img src="../../assets/images/fb.svg" alt="facebook" />
+                    </div>
+                  </div>
+                </div>
+                <div class="definition">
+                  <div class="definition-header">
+                    <span>განმარტების ნახვა (1)</span>
+                    <img
+                      class="arrow"
+                      src="../../assets/images/Icon-arrow-down.svg"
+                      alt="logo"
+                    />
+                  </div>
+                  <div class="definition-box">
+                    <div class="definition-info">
+                      <h2>ათს შოკოლადი</h2>
+                      <span>ავტორი ავტორი</span>
+                    </div>
+                    <div class="like">
+                      <span class="like__number">1,920</span>
+                      <img
+                        src="../../assets/images/like-icon.svg"
+                        alt="like"
+                        class="like__img"
+                      />
+                      <span class="like__time">3 კვირის წინ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="term">
+                <div class="title">
+                  <div class="term-title">
+                    <h2>lorem ipsum</h2>
+                    <img
+                      src="../../assets/images/icon-rejected.svg"
+                      alt="pending"
+                    />
+                  </div>
+                  <div class="terms-left">
+                    <a href="#">Front-End</a>
+                    <div class="social-fb">
+                      <img src="../../assets/images/fb.svg" alt="facebook" />
+                    </div>
+                  </div>
+                </div>
+                <div class="definition wrong">
+                  <div class="definition-header">
+                    <span>ტერმინი უარყოფილია</span>
+                    <img
+                      class="arrow"
+                      src="../../assets/images/Icon-arrow-down.svg"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="term">
+                <div class="title">
+                  <div class="term-title">
+                    <h2>lorem ipsum</h2>
+                    <img
+                      src="../../assets/images/icon-accepted.svg"
+                      alt="pending"
+                    />
+                  </div>
+                  <div class="terms-left">
+                    <a href="#">Front-End</a>
+                    <div class="social-fb">
+                      <img src="../../assets/images/fb.svg" alt="facebook" />
+                    </div>
+                  </div>
+                </div>
+                <div class="definition">
+                  <div class="definition-header">
+                    <span>განმარტების ნახვა (1)</span>
+                    <img
+                      class="arrow"
+                      src="../../assets/images/Icon-arrow-down.svg"
+                      alt="logo"
+                    />
+                  </div>
+                  <div class="definition-box">
+                    <div class="definition-info">
+                      <h2>ათს შოკოლადი</h2>
+                      <span>ავტორი ავტორი</span>
+                    </div>
+                    <div class="like">
+                      <span class="like__number">1,920</span>
+                      <img
+                        src="../../assets/images/like-icon.svg"
+                        alt="like"
+                        class="like__img"
+                      />
+                      <span class="like__time">3 კვირის წინ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-success-message hidden">
+        <div class="container">
+          <h1>მონაცემები წარმატებით შეიცვალა</h1>
+          <img src="../../assets/images/tick-mark.svg" alt="tick-mark" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="left-block-social">
+          <a href="../../index.html" class="logoStyle">
+            <div class="main">
+              <div class="logo">
+                <img src="../../assets/images/logo.svg" alt="logo" />
+              </div>
+              <h2>შექმენი ქართული ტერმინი</h2>
+            </div>
+          </a>
+          <div class="social-icons">
+            <a href=""><div class="circle insta">
+              <i class="fa fa-instagram"></i>
+            </div></a>
+            <a href=""><div class="circle twitter">
+              <i class="fa fa-twitter"></i>
+            </div></a>
+            <a href=""><div class="circle fb">
+              <i class="fa fa-facebook"></i>
+            </div></a>
+          </div>
+        </div>
+        <div class="middle-block">
+          <div class="contact-info">
+            <p><a href="./contact.html">საკონტაქტო ინფორმაცია</a></p>
+            <p><a href="./terms_and_condition.html">გამოყენების წესები</a></p>
+          </div>
+        </div>
+        <div class="right-block-partners">
+          <div class="partners">
+            <p>პარტნიორები</p>
+            <div class="partners-logo">
+              <div class="div-logo"></div>
+              <div class="div-logo"></div>
+              <div class="div-logo"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tablet-responsive">
+          <div class="contact-info">
+            <p><a href="./contact.html">საკონტაქტო ინფორმაცია</a></p>
+            <p><a href="./terms_and_condition.html">გამოყენების წესები</a></p>
+            <div class="partners-logo">
+              <div class="div-logo"></div>
+              <div class="div-logo"></div>
+              <div class="div-logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+      integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

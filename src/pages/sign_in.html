@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="შექმენი ქართული ტერმინი, შემოუერთდი ტერმინების კონკურსს!" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:url" content="" /> -->
+  <meta property="og:title" content="შემოგვთავაზე შენი ტერმინი" />
+  <meta property="og:description" content="შექმენი ქართული ტერმინი, შემოუერთდი ტერმინების კონკურსს!" />
+  <meta property="og:image" content="../../assets/images/sharing-image.JPG" />
+
+
+
+  <!-- icon -->
+  <link rel="icon" type="image/x-icon" href="../../assets/images/logo.svg" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/79fbebef68.js" crossorigin="anonymous"></script>
+  <title>შემოგვთავაზე შენი ტერმინი</title>
+  <link rel="stylesheet" href="../css/global.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="../../index.html" class="logoStyle">
+        <div class="main">
+          <div class="logo">
+            <img src="../../assets/images/logo.svg" alt="logo" />
+          </div>
+          <h2>შექმენი ქართული ტერმინი</h2>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="./about.html">პროექტის შესახებ</a></li>
+          <li><a href="./termins_bank.html">ტერმინების ბანკი</a></li>
+          <li>
+            <a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a>
+          </li>
+          <li><a href="./contact.html">კონტაქტი</a></li>
+        </ul>
+      </nav>
+      <div class="sign-in-btn">
+        <a href="./sign_in.html" class="active">შესვლა</a>
+      </div>
+      <div class="burger-bar">
+        <img class="open-burger" src="../../assets/images/burger.svg" alt="burger" />
+        <img class="close-burger hidden" src="../../assets/images/closeX.svg" alt="closeBurger" />
+      </div>
+      <div class="profile hidden" id="profile">
+        <h5 class="user">თეკლა</h5>
+        <div class="image"></div>
+      </div>
+      <div class="profile-menu hidden" id="profile-menu">
+        <ul>
+          <li><a href="#">პროფილის რედაქტირება</a></li>
+          <li><a href="#">ჩემი განმარტებები</a></li>
+          <li><a href="#">ჩემი ტერმინები</a></li>
+          <li><a href="index.html">გამოსვლა></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="burger-navigation">
+      <nav>
+        <ul>
+          <li class="profile-weird">
+            <a href="profile.html">თეკლა ფიფქრი
+              <img src="../../assets/images/profile-photo.svg" alt="profileimg" /></a>
+          </li>
+          <li class="shesvla"><a href="sign_in.html">შესვლა</a></li>
+          <li><a href="about.html">პროექტის შესახებ</a></li>
+          <li><a href="termins_bank.html">ტერმინების ბანკი</a></li>
+          <li>
+            <a href="new_term.html">შემოგვთავაზე შენი ტერმინი</a>
+          </li>
+          <li><a href="contact.html">კონტაქტი</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="menu">
+    <section class="signup-login">
+      <div class="container">
+        <div class="toggle-form">
+          <div class="titles">
+            <button class="btn-login active-tab">ავტორიზაცია</button>
+            <button class="btn-signup inactive-tab">რეგისტრაცია</button>
+          </div>
+          <form method="post" class="login">
+            <input type="email" name="email" id="email" placeholder="მომხმარებლის ფოსტა*" class="username" />
+            <span class="error hidden">
+              <div><img src="../../assets/images/error-svg.svg" alt="error">
+                <p class="change-text-error">ელ.ფოსტა სავალდებულოა</p>
+              </div>
+            </span>
+            <div class="password-input">
+              <input type="password" name="password" id="password" placeholder="პაროლი*" class="psw"
+                style="margin-bottom: 10px;">
+              <img class="show-password" src="../../assets/images/icon-eye.svg" alt="eye" />
+              <span class="change-text-error-psw hidden">
+                <div><img src="../../assets/images/error-svg.svg" alt="error">
+                  <p class="change-text-error-psw-text">პაროლი სავალდებულოა</p>
+                </div>
+              </span>
+
+            </div>
+            <span class="error hidden">
+              <div><img src="../../assets/images/error-svg.svg" alt="error">
+                <p>პაროლი სავალდებულოა</p>
+              </div>
+            </span>
+
+            <div class="remember-psw">
+              <div class="check-remember">
+                <input type="checkbox" name="remember" id="remember" />
+                <label for="remember">დამიმახსოვრე</label>
+              </div>
+              <p class="rec-text rec-passowrd-text">პაროლის აღდგენა</p>
+            </div>
+            <button type="button" class="submit-login">ავტორიზაცია</button>
+            <span class="no-account">არ გაქვთ პროფილი? გაიარეთ <span id="not-account"
+                onclick="changeAutoToRegistr()">რეგისტრაცია</span></button></span>
+          </form>
+          <form method="post" class="hidden signup">
+            <input class="email-reg" type="email" placeholder="მომხმარებლის ფოსტა*" />
+            <span class="error hidden">
+              <div><img src="../../assets/images/error-svg.svg" alt="error">
+                <p id="email-error-text" class="error-paragraph"></p>
+              </div>
+            </span>
+            <input class="name-reg" type="text" placeholder="მომხმარებლის სახელი*" />
+            <span class="error hidden">
+              <div><img src="../../assets/images/error-svg.svg" alt="error">
+                <p></p>
+              </div>
+            </span>
+            <input class="phone-reg" type="number" placeholder="ტელეფონის ნომერი*" />
+            <span class="error hidden">
+              <div><img src="../../assets/images/error-svg.svg" alt="error">
+                <p></p>
+              </div>
+            </span>
+            <div class="password-input">
+              <input class="psw-reg" type="password" placeholder="პაროლი*" style="margin-bottom: 10px;" />
+              <span class="error hidden">
+                <div><img src="../../assets/images/error-svg.svg" alt="error">
+                  <p></p>
+                </div>
+              </span>
+              <img class="show-password" src="../../assets/images/icon-eye.svg" alt="eye" />
+            </div>
+            <div class="password-input">
+              <input class="psw-repeat-reg" style="margin-bottom: 10px;" type="password"
+                placeholder="პაროლის გამეორება*" />
+              <span class="error hidden">
+                <div><img src="../../assets/images/error-svg.svg" alt="error">
+                  <p></p>
+                </div>
+              </span>
+              <img class="show-password" src="../../assets/images/icon-eye.svg" alt="eye" />
+            </div>
+            <div class="robot-rules">
+              <span>I'm not a Robot</span>
+              <div class="rules">
+                <input type="checkbox" name="rules" id="rules" />
+                <span class="error-rules hidden">
+                  <div><img src="../../assets/images/error-svg.svg" alt="error">
+                    <p></p>
+                  </div>
+                </span>
+                <label for="rules"><a href="./terms_and_condition.html">ვეთანხმები საიტის წესებს და
+                    პირობებს*</a></label>
+              </div>
+            </div>
+            <button type="button" class="submit-registration">რეგისტრაცია</button>
+          </form>
+        </div>
+        <div class="recovery-email ">
+          <p class="recovery-email-title">შეიყვანე შენი ელ-ფოსტა</p>
+          <form class="email-form">
+            <input class="em-recovery" type="email" placeholder="ელ-ფოსტა" />
+            <span class="error hidden">
+              <div><img src="../../assets/images/error-svg.svg" alt="error">
+                <p>ველი სავალდებულოა</p>
+              </div>
+            </span>
+
+
+            <button type="button" class="submit-email-recovery">გაგზავნა</button>
+
+          </form>
+
+          <section class="recovery-email-success hidden">
+            <div class="container">
+              <h1 class="email-change-text"></h1>
+              <img src="../../assets/images/tick-mark.svg" alt="tick-mark" />
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="left-block-social">
+        <a href="../../index.html" class="logoStyle">
+          <div class="main">
+            <div class="logo">
+              <img src="../../assets/images/logo.svg" alt="logo" />
+            </div>
+            <h2>შექმენი ქართული ტერმინი</h2>
+          </div>
+        </a>
+        <div class="social-icons">
+          <a href=""><div class="circle insta">
+            <i class="fa fa-instagram"></i>
+          </div></a>
+          <a href=""><div class="circle twitter">
+            <i class="fa fa-twitter"></i>
+          </div></a>
+          <a href=""><div class="circle fb">
+            <i class="fa fa-facebook"></i>
+          </div></a>
+        </div>
+      </div>
+      <div class="middle-block">
+        <div class="contact-info">
+          <p><a href="./contact.html">საკონტაქტო ინფორმაცია</a></p>
+          <p><a href="./terms_and_condition.html">გამოყენების წესები</a></p>
+        </div>
+      </div>
+      <div class="right-block-partners">
+        <div class="partners">
+          <p>პარტნიორები</p>
+          <div class="partners-logo">
+            <div class="div-logo"></div>
+            <div class="div-logo"></div>
+            <div class="div-logo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tablet-responsive">
+        <div class="contact-info">
+          <p><a href="./contact.html">საკონტაქტო ინფორმაცია</a></p>
+          <p><a href="./terms_and_condition.html">გამოყენების წესები</a></p>
+          <div class="partners-logo">
+            <div class="div-logo"></div>
+            <div class="div-logo"></div>
+            <div class="div-logo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
