@@ -66,17 +66,25 @@ if (!localStorage.getItem("auth")) {
 }
 const readMore = document.querySelector(".more-click");
 const text = document.querySelector(".text");
+const readMoreText = document.querySelector('.texts')
 
 if (readMore) {
   readMore.addEventListener("click", () => {
     text.classList.toggle("show-more");
     if (readMore.innerHTML === "წაიკითხეთ სრულად") {
       readMore.innerHTML = "შეამცირეთ ტექსტი";
+      if (window.innerWidth < 1200) {
+        readMoreText.style.display = 'block';
+      }
     } else {
       readMore.innerHTML = "წაიკითხეთ სრულად";
+      if (window.innerWidth < 1200) {
+        readMoreText.style.display = 'none';
+      }
     }
   });
 }
+
 
 const readMores = document.querySelector(".for-second-more");
 const text2 = document.querySelector(".second-text-txt");
