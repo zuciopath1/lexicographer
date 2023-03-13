@@ -69,36 +69,47 @@ const text = document.querySelector(".text");
 const readMoreText = document.querySelector('.texts')
 
 if (readMore) {
-  readMore.addEventListener("click", () => {
-    text.classList.toggle("show-more");
-    if (readMore.innerHTML === "წაიკითხეთ სრულად") {
-      readMore.innerHTML = "შეამცირეთ ტექსტი";
-      if (window.innerWidth < 1200) {
-        readMoreText.style.display = 'block';
-      }
-    } else {
-      readMore.innerHTML = "წაიკითხეთ სრულად";
-      if (window.innerWidth < 1200) {
-        readMoreText.style.display = 'none';
+  readMore.addEventListener("click", (e) => {
+    if (!e.target.classList.contains('text')) {
+      text.classList.toggle("show-more");
+      if (readMore.innerHTML === "წაიკითხეთ სრულად") {
+        readMore.innerHTML = "შეამცირეთ ტექსტი";
+        if (window.innerWidth < 1200) {
+          readMoreText.style.display = 'block';
+        }
+      } else {
+        readMore.innerHTML = "წაიკითხეთ სრულად";
+        if (window.innerWidth < 1200) {
+          readMoreText.style.display = 'none';
+        }
       }
     }
   });
 }
-
 
 const readMores = document.querySelector(".for-second-more");
 const text2 = document.querySelector(".second-text-txt");
+const readMoreTextSecond = document.querySelector('.texts2')
 
 if (readMores) {
   readMores.addEventListener("click", (e) => {
-    text2.classList.toggle("show-more");
-    if (readMores.innerHTML === "წაიკითხეთ სრულად") {
-      readMores.innerHTML = "შეამცირეთ ტექსტი";
-    } else {
-      readMores.innerHTML = "წაიკითხეთ სრულად";
+    if (!e.target.classList.contains('texts2')) {
+      text2.classList.toggle("show-more");
+      if (readMores.innerHTML === "წაიკითხეთ სრულად") {
+        readMores.innerHTML = "შეამცირეთ ტექსტი";
+        if (window.innerWidth < 1200) {
+          readMoreTextSecond.style.display = 'block';
+        }
+      } else {
+        readMores.innerHTML = "წაიკითხეთ სრულად";
+        if (window.innerWidth < 1200) {
+          readMoreTextSecond.style.display = 'none';
+        }
+      }
     }
   });
 }
+
 // end of show more text function
 
 // Form Validation

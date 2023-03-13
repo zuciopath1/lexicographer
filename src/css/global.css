@@ -4146,8 +4146,11 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
   .project img {
     margin: 0 auto;
   }
-  .texts {
+  .texts,.texts2 {
     display: none;
+  }
+  .texts2{
+    margin-bottom: 8px;
   }
   main section.about-project-section .container .project {
     flex-direction: column-reverse;
