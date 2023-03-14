@@ -5,18 +5,19 @@ const main = document.getElementById("menu");
 const burgerNavigation = document.querySelector(".burger-navigation");
 const burgerOpenIcon = document.querySelector(".open-burger");
 const burgerCloseIcon = document.querySelector(".close-burger");
+const body = document.querySelector('body')
 if (burgerOpenIcon) {
   burgerOpenIcon.addEventListener("click", () => {
+    body.classList.add('overflowHidden')
     burgerNavigation.classList.add("clicked");
     burgerOpenIcon.classList.add("hidden");
     burgerCloseIcon.classList.remove("hidden");
-    main.classList.add("hidden");
   });
   burgerCloseIcon.addEventListener("click", () => {
+    body.classList.remove('overflowHidden')
     burgerNavigation.classList.remove("clicked");
     burgerCloseIcon.classList.add("hidden");
     burgerOpenIcon.classList.remove("hidden");
-    main.classList.remove("hidden");
   });
 }
 // end of burger navigation
@@ -67,18 +68,20 @@ if (!localStorage.getItem("auth")) {
 const readMore = document.querySelector(".more-click");
 const text = document.querySelector(".text");
 const readMoreText = document.querySelector('.texts')
-
+const arrowRotate = document.querySelector('.arrowToggle')
 if (readMore) {
   readMore.addEventListener("click", (e) => {
     if (!e.target.classList.contains('text')) {
       text.classList.toggle("show-more");
       if (readMore.innerHTML === "წაიკითხეთ სრულად") {
         readMore.innerHTML = "შეამცირეთ ტექსტი";
+        arrowRotate.classList.add('rotate')
         if (window.innerWidth < 1200) {
           readMoreText.style.display = 'block';
         }
       } else {
         readMore.innerHTML = "წაიკითხეთ სრულად";
+        arrowRotate.classList.remove('rotate')
         if (window.innerWidth < 1200) {
           readMoreText.style.display = 'none';
         }
@@ -90,6 +93,7 @@ if (readMore) {
 const readMores = document.querySelector(".for-second-more");
 const text2 = document.querySelector(".second-text-txt");
 const readMoreTextSecond = document.querySelector('.texts2')
+const arrowRotate2 = document.querySelector('.arrowToggle2')
 
 if (readMores) {
   readMores.addEventListener("click", (e) => {
@@ -97,11 +101,13 @@ if (readMores) {
       text2.classList.toggle("show-more");
       if (readMores.innerHTML === "წაიკითხეთ სრულად") {
         readMores.innerHTML = "შეამცირეთ ტექსტი";
+        arrowRotate2.classList.add('rotate')
         if (window.innerWidth < 1200) {
           readMoreTextSecond.style.display = 'block';
         }
       } else {
         readMores.innerHTML = "წაიკითხეთ სრულად";
+        arrowRotate2.classList.remove('rotate')
         if (window.innerWidth < 1200) {
           readMoreTextSecond.style.display = 'none';
         }
