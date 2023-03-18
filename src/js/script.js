@@ -20,6 +20,14 @@ if (burgerOpenIcon) {
     burgerOpenIcon.classList.remove("hidden");
   });
 }
+
+const logout = () => {
+  event.preventDefault();
+  document.querySelector('#logout-burger').submit();
+};
+
+const logoutLink = document.querySelector('#logout-link');
+logoutLink.addEventListener('click', logout);
 // end of burger navigation
 // gsap anymation
 if (myTerms) {
