@@ -187,7 +187,7 @@ a {
   display: none;
 }
 .text.show-more .more-texts {
-  display: inline-block;
+  display: inline;
 }
 .text .texts {
   color: #000000;
@@ -432,6 +432,9 @@ body header .container .signed-in-profile__text:active, body header .container .
 }
 @media (max-width: 1200px) {
   body header .container .signed-in-profile {
+    display: none;
+  }
+  .texts{
     display: none;
   }
 }
@@ -2743,8 +2746,7 @@ body footer .container .tablet-responsive {
   }
   body main section.about-project .container .left-block .about-project-text p {
     font-size: 16px;
-    line-height: normal;
-    margin: 5px 0 20px 0;
+    line-height: 1.2;
   }
   body main section.about-project .container .left-block a .btn-your-term {
     min-width: 284px;
@@ -3008,12 +3010,11 @@ body footer .container .tablet-responsive .contact-info p a:visited:hover {
   body header .burger-navigation {
     position: absolute;
     z-index: 10;
-    display: none !important;
+    display: none;
     position: fixed;
     background-color: #f9f7f5;
     width: 100%;
     height: 100%;
-    display: flex;
     flex-direction: column;
     transition: all 250ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
     align-items: flex-end;
@@ -3284,7 +3285,6 @@ body footer .container .tablet-responsive .contact-info p a:visited:hover {
   }
   body main section.about-project .container .left-block .about-project-text p {
     font-size: 16px;
-    line-height: normal;
   }
   body main section.about-project .container .left-block a .btn-your-term {
     min-width: 175px;
@@ -3620,13 +3620,8 @@ body {
 main {
   flex-grow: 1;
 }
-
-.about-project-text .text p {
-  display: inline;
-}
-
 .about-project-text.show-more .more-texts {
-  display: inline-block;
+  display: inline;
 }
 
 .about-project {
@@ -4131,11 +4126,10 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
     max-width: 724px;
     width: 100%;
   }
-  .about-project-text p:nth-child(1) {
-    display: none !important;
-  }
   .text .more-texts p {
     display: block !important;
+    font-size: 14px;
+    line-height: 16px;
   }
   .more-click {
     font-size: 16px !important;
@@ -4146,9 +4140,7 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
   .project img {
     margin: 0 auto;
   }
-  .texts,.texts2 {
-    display: none;
-  }
+ 
   .texts2{
     margin-bottom: 8px;
   }
