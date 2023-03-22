@@ -27,7 +27,7 @@ const logout = () => {
 };
 
 const logoutLink = document.querySelector('#logout-link');
-logoutLink.addEventListener('click', logout);
+if(logoutLink) logoutLink.addEventListener('click', logout);
 // end of burger navigation
 // gsap anymation
 if (myTerms) {
@@ -79,6 +79,28 @@ const texts = document.querySelectorAll('.texts');
 const moreTexts = document.querySelectorAll('.more-texts');
 const arrowRotates = document.querySelectorAll('.arrowToggle')
 
+function updateTextVisibility() {
+  if (window.innerWidth < 1200) {
+    texts.forEach(function(text) {
+      text.style.display = 'none';
+    });
+    moreTexts.forEach(function(moreText) {
+      moreText.style.display = 'none';
+    });
+  } else {
+    texts.forEach(function(text) {
+      text.removeAttribute('style');
+    });
+    moreTexts.forEach(function(moreText) {
+      moreText.removeAttribute('style');
+    });
+  }
+}
+
+updateTextVisibility();
+
+window.addEventListener('resize', updateTextVisibility);
+
 readMore.forEach(function (item, index) {
   item.addEventListener('click', function (e) {
     e.target.parentElement.classList.toggle("show-more");
@@ -100,6 +122,7 @@ readMore.forEach(function (item, index) {
     }
   });
 });
+
 
 // end of show more text function
 
@@ -630,10 +653,10 @@ if (profileMenuPicture) {
   });
 }
 
-hiddenMenu.addEventListener("click", () => {
+if(hiddenMenu){hiddenMenu.addEventListener("click", () => {
   setTimeout(() => hiddenMenu.classList.add("hidden"), 1000);
 });
-
+} 
 // profile fields edit
 const saveButton = document.querySelector(".submit-profile-edit");
 
@@ -714,19 +737,19 @@ function addPhoto() {
   };
 }
 // definitions
-const terms = document.querySelectorAll(".block-div");
-if (terms) {
-  const auth = localStorage.getItem("auth");
-  terms.forEach((item) => {
-    item.children[0].addEventListener("click", () => {
-      if (auth === "true") {
-        item.children[0].href = "src/pages/definition.html";
-      } else {
-        item.children[0].href = "./src/pages/login_or_register.html";
-      }
-    });
-  });
-}
+// const terms = document.querySelectorAll(".block-div");
+// if (terms) {
+//   const auth = localStorage.getItem("auth");
+//   terms.forEach((item) => {
+//     item.children[0].addEventListener("click", () => {
+//       if (auth === "true") {
+//         item.children[0].href = "src/pages/definition.html";
+//       } else {
+//         item.children[0].href = "./src/pages/login_or_register.html";
+//       }
+//     });
+//   });
+// }
 // scroll alphabet
 const prevLetter = document.querySelectorAll(".letters-left");
 const nextLetter = document.querySelectorAll(".letters-right");
