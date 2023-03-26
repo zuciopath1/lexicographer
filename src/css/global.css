@@ -4515,6 +4515,9 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
     height: 33px !important;
   }
 }
+.definition-header-1 .eng-def p span,u {
+  font-family: "DejaVuSans" !important;
+}
 @media (max-width: 767px) {
   body main .profile-section .container .right-inner .profile-termins-result .result .description h2 {
     font-size: 16px;
@@ -4853,10 +4856,6 @@ body footer .container .middle-block .contact-info p:nth-child(2) {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.tags > span {
-  padding: initial !important;
 }
 
 .block-div {
