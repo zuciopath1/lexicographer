@@ -2232,9 +2232,6 @@ body main section.definition-offer .container .definition-header-1 .definition-t
 body main section.definition-offer .container .definition-header-1 .definition-title .info .fb-icon {
   margin-left: 35px;
 }
-body main section.definition-offer .container .definition-header-1 p {
-  color: #798996;
-}
 body main section.definition-offer .container .definition-header-1 .eng-def {
   font-family: "Quicksand", sans-serif;
   margin-bottom: 12px;
@@ -4517,6 +4514,12 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
 }
 .definition-header-1 .eng-def p span,u {
   font-family: "DejaVuSans" !important;
+  color: #1C2828;
+  font-weight: bold;
+}
+.eng-def p {
+  color: #1C2828;
+  font-weight: bold;
 }
 @media (max-width: 767px) {
   body main .profile-section .container .right-inner .profile-termins-result .result .description h2 {
@@ -4897,18 +4900,6 @@ body {
   width: 100%;
   background-color: #798996;
 }
-
-/* .more-click::before {
-    content: "";
-    position: absolute;
-    right: -40px;
-    top: 25%;
-    transform: translateY(-50%) rotate(45deg);
-    height: 20px;
-    width: 20px;
-    border: solid black;
-    border-width: 0 3px 3px 0;
-  } */
 .terms-and-condition__section--header {
   color: #707070 !important;
 }
